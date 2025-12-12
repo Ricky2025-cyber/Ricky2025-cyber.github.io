@@ -2290,12 +2290,12 @@ input[type="radio"] + label:before {
 }
 
 .image.avatar {
-  border-radius: 100%;
+  border-radius: 0%;
   overflow: hidden;
 }
 
 .image.avatar img {
-  border-radius: 100%;
+  border-radius: 0%;
   display: block;
   width: 100%;
 }
@@ -2860,8 +2860,8 @@ input[type="button"]:disabled,
 
 #header > header .avatar {
   display: block;
-  margin: 0 auto 2.25em auto;
-  width: 8em;
+  /*margin: 0 auto 2.25em auto;*/
+  width: 100%;
 }
 
 #header > header h1 {
@@ -3008,7 +3008,8 @@ input[type="button"]:disabled,
   }
 
   #header > header {
-    padding: 2em;
+    padding: 0;
+    padding-bottom: 0rem;
   }
 
   #header > footer {
@@ -3323,8 +3324,8 @@ input[type="button"]:disabled,
   }
 
   #header > header .avatar {
-    margin: 0 auto 1.6875em auto;
-    width: 6em;
+ /*   margin: 0 auto 1.6875em auto;*/
+    width: 100%;
   }
 
   #header > header h1 {
@@ -3448,4 +3449,11 @@ input[type="button"]:disabled,
   .button {
     padding: 0;
   }
+}
+
+#profile-summary {
+    position: absolute;
+    top: 10rem;
+    padding: 0.5rem;
+    padding-top: 6rem;
 }
