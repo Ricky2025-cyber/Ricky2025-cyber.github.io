@@ -1,201 +1,624 @@
-<!doctype html>
-<!--
-	Read Only by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-  <head>
-    <title>Ricardyne Bastien-Étudiante en Études internationales</title>
-    <meta charset="utf-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=no"
-    />
-    <link rel="stylesheet" href="assets/css/main.css" />
-  </head>
-  <body class="is-preload">
-    <!-- Header -->
-    <section id="header">
-      <header>
-        <span class="image avatar"
-          ><a href="images/image.jpg"><img src="images/image.jpg" alt="Photo de Ricardyne"
-        /></a></span>
-        <h1 id="logo"><a href="images/image.jpg">Ricardyne Bastien</a></h1>
-        <p>
-          Étudiante en Études Internationales-Université Laval<br />
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SurveyMonkey - Présentation 180 secondes</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        </p>
-      </header>
-      <nav id="nav">
-        <ul>
-          <li><a href="#one" class="active">À propos</a></li>
-          <li><a href="#two">Ministère des Affaires Étrangères et des Cultes</a></li>
-           <li><a href="#three">Mon CV</a></li>
-         <li><a href="tel:+15553234334">+1 555 323 4334</a></li>
-        </ul>
-      </nav>
-      <footer>
-        <ul class="icons">
-          <li>
-            <!-- Vous pouvez mettre en hyperlien vos reseaux sociaux en modifiant la valeur de href-->
-            <a href="https://x.com/" class="icon brands fa-twitter"
-              ><span class="label">Twitter</span></a
-            >
-          </li>
-          <li>
-            <a href="https://www.facebook.com" class="icon brands fa-facebook-f"
-              ><span class="label"></span></a
-            >
-          </li>
-          <li>
-            <a href="https://www.linkedin.com/in/ricardyne-bastien" class="icon brands fa-linkedin"
-              ><span class="label">b?utm_so </span></a
-            >
-          </li>
-          <li>
-            <a href="https://github.com/Ricky2025-cyber" class="icon brands fa-github"
-              ><span class="label"></span></a
-            >
-          </li>
-          <li>
-            <a href="mailto:ricardynebastien@gmail.com"class="icon solid fa-envelope"
-              ><span class="label"></span></a
-            >
-          </li>
-        </ul>
-      </footer>
-    </section>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            overflow: hidden;
+        }
 
-    <!-- Wrapper -->
-    <div id="wrapper">
-      <!-- Main -->
-      <div id="main">
-        <!-- One -->
-        <section id="one">
-          <div class="image main" data-position="center">
-            <img src="images/Plage..webp" alt="Bannière Ricardyne Bastien"/>
-            
-          </div>
-          <div class="container">
-            <header class="major">
-              <h2>Ricardyne Bastien</h2>
-              <p>Tourisme et industries créatives.</p>
-            </header>
-            <p>
-              Diplômée en Diplomatie et Relations Internationales à l’Académie Nationale Diplomatique et Consulaire (ANDC) et actuellement 
-              en Maîtrise en Études Internationales-Développement International à l’Université Laval,
-              je mobilise mes compétences en gouvernance du numérique et en politiques culturelles
-              pour promouvoir un développement économique durable axé sur le tourisme, les industries créatives et la coopération internationale, dans une perspective de croissance inclusive, d’innovation et de valorisation de la culture haïtienne comme levier de transformation.   
+        .presentation {
+            width: 100vw;
+            height: 100vh;
+            position: relative;
+        }
 
- 
-            </p>
-          </div>
-        </section>
+        .slide {
+            width: 100%;
+            height: 100%;
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 60px;
+            background: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            animation: slideIn 0.5s ease-out;
+        }
 
-        <!-- Two -->
-        <section id="two">
-          <div class="container">
-            <h3>Mes réalisations</h3>
-            <p>
-           
-        </li> Œuvrant depuis plus de trois ans d'expérience au Ministère haïtien des
-        Affaires Étrangères, j'ai contribué à la rédaction de discours diplomatiques, 
-        de notes stratégiques et de rapports institutionnels tout en participant activement 
-        à des rencontres stratégiques. Mon expertise s'est enrichie à travers des formations 
-        spécialisées en droit international public à l'Académie de La Haye, en ingénierie 
-        culturelle et en gouvernance de l'Internet à l'Université Senghor, où j'ai développé 
-        une vision stratégique des enjeux numériques contemporains. J'ai également participé activemennt  
-        à des projets d'envergure comme la première édition du salon BIZTEK en mai2023 pour promouvoir 
-        l'entrepreneuriat technologique chez les jeunes, démontrant ainsi mon engagement à 
-        connecter innovation et développement international. 
+        .slide.active {
+            display: flex;
+        }
 
- 
-        </li> 
-        
-            </p>
-            <ul class="feature-icons">
-              <li class="icon linguistique fa-code">
-                Compétences linguistiques
-                
-                
-              </li>
-              <li class= "icon solid fa-cubes" > 
-                Maitrise d'outils numériques
-              
-              </li>
-       
-         </ul>
-          </div>
-        </section>
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(100px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
 
-        <!-- Three -->
-        <section id="three">
-          <div class="container">
-            <h3>Mon CV</h3>
-            <p>
-              Le parcours présenté dans cet aperçu de mon CV témoigne de cette vision engagée et multidisciplinaire, 
-              dont je fais montre. Une vision orientée vers l’innovation, la coopération et la mise 
-              en valeur des potentialités d’Haïti pour impulser des dynamiques de transformation et 
-              de progrès durable.   
-             </p>
-            <div class="features">
-              <article>
-            <a href="CV" class="image"
-                  ><img src="images/CV2.jpg" alt="photo de cv"
-                 /></a>
-                <div class="inner">
-                  <h4></h4>
-                  <p></p>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
+        .slide-number {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            font-size: 18px;
+            color: #666;
+            font-weight: bold;
+        }
 
-        <!-- Four -->
-        <section id="four">
-          <div class="container">
-            <h3>Me joindre</h3>
-            <p>
-            Vous êtes interessé(e) par mon profil, joignez-moi à cette adresse pour de fructueux échanges. 
-            </p>
-            <div class="row gtr-uniform">
-              <div class="col-12">
-                <!-- Vous pouvez mettre votre email ici au lieu de your-email@example.com -->
-                <a
-                  href="mailto:?subject=Sujet&body=Votre message ici."
-                  class="button primary"
-                >
-                  Envoyer un email
-                </a>
-              </div>
-            </div>
-          </div>
-        </section>
-        <!-- Five -->
-        <!-- -->
-      </div>
+        .timer {
+            position: absolute;
+            top: 20px;
+            left: 40px;
+            font-size: 24px;
+            color: #00bf6f;
+            font-weight: bold;
+            background: rgba(0, 191, 111, 0.1);
+            padding: 10px 20px;
+            border-radius: 25px;
+        }
 
-      <!-- Footer -->
-      <section id="footer">
-        <div class="container">
-          <ul class="copyright">
-            <li>&copy; Untitled. All rights reserved.</li>
-            <li>Design: <a href="#">Rickie</a></li>
-          </ul>
+        h1 {
+            color: #1f2933;
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        h2 {
+            color: #00bf6f;
+            font-size: 2em;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        h3 {
+            color: #1f2933;
+            font-size: 1.5em;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            color: #666;
+            font-size: 1.3em;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .content {
+            max-width: 1300px;
+            width: 100%;
+        }
+
+        .timeline {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            margin: 30px 0;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            top: 50px;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(to right, #00bf6f, #667eea);
+            z-index: 0;
+        }
+
+        .timeline-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        .timeline-year {
+            background: #00bf6f;
+            color: white;
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-weight: bold;
+            font-size: 1.2em;
+            box-shadow: 0 4px 15px rgba(0,191,111,0.3);
+        }
+
+        .timeline-text {
+            font-size: 1.1em;
+            padding: 0 10px;
+            color: #1f2933;
+        }
+
+        .cycle-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border: 3px solid #00bf6f;
+            border-radius: 20px;
+            padding: 25px;
+            margin: 25px 0;
+            text-align: center;
+        }
+
+        .cycle-title {
+            color: #00bf6f;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .comparison-table thead {
+            background: linear-gradient(135deg, #00bf6f 0%, #00a85d 100%);
+            color: white;
+        }
+
+        .comparison-table th {
+            padding: 15px;
+            font-size: 1.1em;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .comparison-table td {
+            padding: 12px;
+            text-align: center;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 1em;
+        }
+
+        .comparison-table tbody tr:hover {
+            background: #f5f8fa;
+        }
+
+        .comparison-table .tool-name {
+            font-weight: bold;
+            color: #1f2933;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .score-circle {
+            display: inline-block;
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            line-height: 35px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .score-high { background: #00bf6f; }
+        .score-medium { background: #f59e0b; }
+        .score-low { background: #e74c3c; }
+
+        .check-icon { color: #00bf6f; font-size: 1.5em; }
+        .cross-icon { color: #e74c3c; font-size: 1.5em; }
+
+        .demo-steps {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .demo-card {
+            background: white;
+            border: 2px solid #00bf6f;
+            border-radius: 15px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 6px 20px rgba(0,191,111,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .demo-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 10px 30px rgba(0,191,111,0.25);
+        }
+
+        .demo-number {
+            background: #00bf6f;
+            color: white;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .demo-title {
+            color: #1f2933;
+            font-size: 1.2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .demo-desc {
+            color: #666;
+            font-size: 1em;
+            line-height: 1.6;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #fff5f5 0%, #ffe0e0 100%);
+            border-left: 5px solid #e74c3c;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+            font-weight: 500;
+        }
+
+        .choice-box {
+            background: linear-gradient(135deg, #f0fdf4 0%, #dcfce7 100%);
+            border-left: 5px solid #00bf6f;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+            font-size: 1.2em;
+        }
+
+        .navigation {
+            position: fixed;
+            bottom: 40px;
+            right: 40px;
+            display: flex;
+            gap: 15px;
+            z-index: 1000;
+        }
+
+        .nav-btn {
+            background: rgba(0, 191, 111, 0.9);
+            color: white;
+            border: none;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            font-size: 1.5em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        .nav-btn:hover {
+            background: #00a85d;
+            transform: scale(1.1);
+        }
+
+        .progress-bar {
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            height: 5px;
+            background: #00bf6f;
+            width: 0%;
+            transition: width 0.3s ease;
+        }
+
+        .emoji {
+            font-size: 3em;
+            margin-bottom: 20px;
+        }
+
+        .context-box {
+            background: #f5f8fa;
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            text-align: left;
+        }
+
+        .context-example {
+            font-size: 1.1em;
+            line-height: 1.8;
+            color: #1f2933;
+            margin: 10px 0;
+        }
+
+        .icon-large {
+            font-size: 2.5em;
+            color: #00bf6f;
+            margin-bottom: 15px;
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2em; }
+            h2 { font-size: 1.5em; }
+            .slide { padding: 30px; }
+            .demo-steps { grid-template-columns: 1fr; }
+            .timeline { flex-direction: column; }
+        }
+    </style>
+</head>
+<body>
+    <div class="presentation">
+        <!-- Timer global -->
+        <div class="timer" id="globalTimer">⏱️ 3:00</div>
+
+        <!-- Slide 1: Titre -->
+        <div class="slide active">
+            <div class="slide-number">1/4</div>
+            <h1>SurveyMonkey</h1>
+            <p class="subtitle">Plateforme de sondages en ligne pour la collecte de données</p>
+            <div class="emoji">📊</div>
+            <h2>Outil de collecte de données quantitatives et qualitatives</h2>
         </div>
-      </section>
+
+        <!-- Slide 2: Point d'observation (Historique) -->
+        <div class="slide">
+            <div class="slide-number">2/4</div>
+            <div class="content">
+                <h2>Point d'Observation : Historique</h2>
+                
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-year">1999</div>
+                        <div class="timeline-text"><strong>Création</strong><br>Ryan Finley crée SurveyMonkey pour remplacer les sondages papier coûteux</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2009</div>
+                        <div class="timeline-text"><strong>Expansion</strong><br>Intégration API et outils d'analyse avancés</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2015</div>
+                        <div class="timeline-text"><strong>Démocratisation</strong><br>+25 millions d'utilisateurs, leader mondial</div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-year">2024</div>
+                        <div class="timeline-text"><strong>IA intégrée</strong><br>Analyse prédictive et suggestions intelligentes</div>
+                    </div>
+                </div>
+
+                <div class="highlight-box">
+                    <i class="fas fa-lightbulb"></i> <strong>Fait intéressant :</strong> SurveyMonkey traite plus de 20 millions de questions par jour dans le monde!
+                </div>
+
+                <div class="cycle-box">
+                    <div class="cycle-title">📍 Étape du cycle de recherche</div>
+                    <h3 style="color: #1f2933; margin-top: 10px;">COLLECTE DE DONNÉES</h3>
+                    <p style="font-size: 1.2em; color: #666; margin-top: 10px;">
+                        Phase de terrain → Recueil de données primaires quantitatives et qualitatives auprès des participants
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 3: Arpentage et choix éditorial (Comparaisons) -->
+        <div class="slide">
+            <div class="slide-number">3/4</div>
+            <div class="content">
+                <h2>Arpentage : Comparaison des Outils</h2>
+                
+                <table class="comparison-table">
+                    <thead>
+                        <tr>
+                            <th style="text-align: left; padding-left: 20px;">Outil</th>
+                            <th>Accessibilité</th>
+                            <th>Communauté</th>
+                            <th>Popularité</th>
+                            <th>Compatibilité</th>
+                            <th>Transparence</th>
+                            <th>Flexibilité</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td class="tool-name">🏆 SurveyMonkey</td>
+                            <td><span class="score-circle score-high">9/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-high">10/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                            <td><span class="score-circle score-high">9/10</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tool-name">Google Forms</td>
+                            <td><span class="score-circle score-high">10/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-high">9/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-medium">6/10</span></td>
+                            <td><span class="score-circle score-medium">6/10</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tool-name">Qualtrics</td>
+                            <td><span class="score-circle score-medium">6/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-high">8/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                            <td><span class="score-circle score-high">10/10</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tool-name">LimeSurvey</td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                            <td><i class="fas fa-times-circle cross-icon"></i></td>
+                            <td><span class="score-circle score-low">5/10</span></td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                            <td><span class="score-circle score-high">10/10</span></td>
+                            <td><span class="score-circle score-high">8/10</span></td>
+                        </tr>
+                        <tr>
+                            <td class="tool-name">Typeform</td>
+                            <td><span class="score-circle score-high">8/10</span></td>
+                            <td><i class="fas fa-check-circle check-icon"></i></td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                            <td><span class="score-circle score-medium">6/10</span></td>
+                            <td><span class="score-circle score-medium">6/10</span></td>
+                            <td><span class="score-circle score-medium">7/10</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="choice-box">
+                    <strong><i class="fas fa-award"></i> Choix éditorial :</strong> SurveyMonkey offre le meilleur équilibre entre facilité d'utilisation, fonctionnalités avancées et compatibilité. Idéal pour la recherche académique nécessitant logique complexe et analyses robustes.
+                </div>
+            </div>
+        </div>
+
+        <!-- Slide 4: Manuel d'instruction (Démonstration) -->
+        <div class="slide">
+            <div class="slide-number">4/4</div>
+            <div class="content">
+                <h2>Manuel d'Instruction : Démonstration Pratique</h2>
+                
+                <div class="demo-steps">
+                    <div class="demo-card">
+                        <div class="demo-number">1</div>
+                        <div class="icon-large"><i class="fas fa-plus-circle"></i></div>
+                        <div class="demo-title">Création</div>
+                        <div class="demo-desc">Choisir un template ou partir de zéro. Ajouter questions (choix multiples, échelles, texte libre)</div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <div class="demo-number">2</div>
+                        <div class="icon-large"><i class="fas fa-random"></i></div>
+                        <div class="demo-title">Configuration</div>
+                        <div class="demo-desc">Appliquer la logique de branchement conditionnelle et randomisation pour éviter les biais</div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <div class="demo-number">3</div>
+                        <div class="icon-large"><i class="fas fa-paper-plane"></i></div>
+                        <div class="demo-title">Diffusion</div>
+                        <div class="demo-desc">Partager via email, lien web, QR code ou intégration sur site web</div>
+                    </div>
+                </div>
+
+                <div class="demo-steps" style="grid-template-columns: repeat(2, 1fr);">
+                    <div class="demo-card">
+                        <div class="demo-number">4</div>
+                        <div class="icon-large"><i class="fas fa-chart-bar"></i></div>
+                        <div class="demo-title">Analyse</div>
+                        <div class="demo-desc">Tableaux de bord temps réel, graphiques automatiques, filtres croisés</div>
+                    </div>
+                    
+                    <div class="demo-card">
+                        <div class="demo-number">5</div>
+                        <div class="icon-large"><i class="fas fa-download"></i></div>
+                        <div class="demo-title">Export</div>
+                        <div class="demo-desc">Export vers Excel, SPSS, CSV pour analyses statistiques approfondies</div>
+                    </div>
+                </div>
+
+                <div class="context-box">
+                    <h3 style="color: #00bf6f;"><i class="fas fa-microscope"></i> Contexte de recherche</h3>
+                    <p class="context-example">
+                        <strong>Exemple :</strong> Étude sur la satisfaction étudiante. Créer un sondage avec échelles de Likert, questions ouvertes pour commentaires, logique de branchement selon le programme d'études. Collecter 500+ réponses en 48h, analyser les tendances par département, exporter pour analyses statistiques (ANOVA, régression).
+                    </p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Barre de progression -->
+        <div class="progress-bar" id="progressBar"></div>
+
+        <!-- Navigation -->
+        <div class="navigation">
+            <button class="nav-btn" onclick="previousSlide()"><i class="fas fa-arrow-left"></i></button>
+            <button class="nav-btn" onclick="nextSlide()"><i class="fas fa-arrow-right"></i></button>
+        </div>
     </div>
 
-    <!-- Scripts -->
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/js/jquery.scrollex.min.js"></script>
-    <script src="assets/js/jquery.scrolly.min.js"></script>
-    <script src="assets/js/browser.min.js"></script>
-    <script src="assets/js/breakpoints.min.js"></script>
-    <script src="assets/js/util.js"></script>
-    <script src="assets/js/main.js"></script>
-  </body>
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        const totalSlides = slides.length;
+        const progressBar = document.getElementById('progressBar');
+        
+        // Timer global (180 secondes)
+        let totalSeconds = 180;
+        const timerDisplay = document.getElementById('globalTimer');
+        
+        function updateTimer() {
+            const minutes = Math.floor(totalSeconds / 60);
+            const seconds = totalSeconds % 60;
+            timerDisplay.textContent = `⏱️ ${minutes}:${seconds.toString().padStart(2, '0')}`;
+            
+            if (totalSeconds > 0) {
+                totalSeconds--;
+                setTimeout(updateTimer, 1000);
+            } else {
+                timerDisplay.textContent = '⏱️ Terminé!';
+                timerDisplay.style.background = 'rgba(231, 76, 60, 0.2)';
+                timerDisplay.style.color = '#e74c3c';
+            }
+        }
+        
+        // Démarrer le timer au premier clic
+        let timerStarted = false;
+        
+        function showSlide(n) {
+            if (!timerStarted && n > 0) {
+                updateTimer();
+                timerStarted = true;
+            }
+            
+            slides.forEach(slide => slide.classList.remove('active'));
+            currentSlide = (n + totalSlides) % totalSlides;
+            slides[currentSlide].classList.add('active');
+            
+            const progress = ((currentSlide + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + '%';
+        }
+        
+        function nextSlide() {
+            showSlide(currentSlide + 1);
+        }
+        
+        function previousSlide() {
+            showSlide(currentSlide - 1);
+        }
+        
+        // Navigation au clavier
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'ArrowRight' || e.key === ' ') {
+                e.preventDefault();
+                nextSlide();
+            } else if (e.key === 'ArrowLeft') {
+                e.preventDefault();
+                previousSlide();
+            }
+        });
+        
+        // Initialisation
+        showSlide(0);
+    </script>
+</body>
 </html>
-
