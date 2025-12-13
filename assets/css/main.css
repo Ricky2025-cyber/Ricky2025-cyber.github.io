@@ -3453,7 +3453,18 @@ input[type="button"]:disabled,
 
 #profile-summary {
     position: absolute;
-    top: 10rem;
+    top: 8rem;
     padding: 0.5rem;
     padding-top: 6rem;
+}
+a[href] {
+    color: #5c4a1e;
+    text-decoration: underline wavy;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+a[href]:hover {
+    color: #5c4a3e;
+    text-decoration: none;
 }
